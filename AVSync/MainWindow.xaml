@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AVSync"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="AVSync" Width="400" Height="500">
+
+    <StackPanel Orientation="Vertical">
+        <!--Load file-->
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="C:\Test\Rawr.mp4" />
+            <Button Content="Open File..." />
+        </StackPanel>
+        <!--Visualizer-->
+        <!--Video Marker-->
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="00:01:30.20" />
+            <Button Content="Mark Video"/>
+        </StackPanel>
+        <!--Audio Marker-->
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="00:01:30.20" />
+            <Button Content="Mark Audio"/>
+        </StackPanel>
+        <!--Diff Output-->
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Time Difference: "/>
+            <TextBlock Text="120 ms"/>
+        </StackPanel>
+    </StackPanel>
 </Window>
