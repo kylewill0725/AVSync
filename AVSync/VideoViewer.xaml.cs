@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace AVSync
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for VideoViewer.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VideoViewer : Window
     {
-        public MainWindow()
+        public VideoViewer()
         {
             InitializeComponent();
-        }
-         
-        private void OpenFile_Click(object sender, RoutedEventArgs e)
-        {
-            var videoWindow = new VideoViewer();
-            videoWindow.Show();
         }
     }
 }

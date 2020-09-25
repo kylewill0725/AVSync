@@ -10,8 +10,8 @@
     <StackPanel Orientation="Vertical">
         <!--Load file-->
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="C:\Test\Rawr.mp4" />
-            <Button Content="Open File..." />
+            <TextBlock x:Name="OpenFilePath" Text="audiosync.mp4" />
+            <Button x:Name="OpenFile" Click="OpenFile_Click" Content="Open File..." />
         </StackPanel>
         <!--Visualizer-->
         <!--Video Marker-->

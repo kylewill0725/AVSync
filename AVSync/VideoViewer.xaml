@@ -1,0 +1,20 @@
+﻿<Window x:Class="AVSync.VideoViewer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AVSync"
+        mc:Ignorable="d"
+        Title="VideoViewer">
+    <StackPanel Orientation="Vertical">
+        <MediaElement Height="720" Width="1280" LoadedBehavior="Play" Source="AudioSync.mp4">
+            
+        </MediaElement>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="PreviousSecond" Content="Rewind 1 Second"/>
+            <Button x:Name="PreviousFrame" Content="Rewind 1 Frame"/>
+            <Button x:Name="Play" Content="Pause"/>
+            <Button x:Name="NextFrame" Content="Next Frame"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
