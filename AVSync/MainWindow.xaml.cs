@@ -23,12 +23,17 @@ namespace AVSync
         public MainWindow()
         {
             InitializeComponent();
+            waveform.RegisterSoundPlayer(((MainWindowVM)DataContext).Player);
         }
          
         private void OpenFile_Click(object sender, RoutedEventArgs e)
         {
-            var videoWindow = new VideoViewer();
-            videoWindow.Show();
+            var openFileWindow = new Microsoft.Win32.OpenFileDialog();
+            var result = openFileWindow.ShowDialog();
+            if (result == true)
+            {
+                ((MainWindowVM) DataContext).VideoPath = openFileWindow.FileName;
+            }
         }
     }
 }

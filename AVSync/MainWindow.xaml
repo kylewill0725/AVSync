@@ -4,16 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AVSync"
+        xmlns:svl="clr-namespace:WPFSoundVisualizationLib;assembly=WPFSoundVisualizationLib"
         mc:Ignorable="d"
         Title="AVSync" Width="400" Height="500">
-
+    <Window.DataContext>
+        <local:MainWindowVM/>
+    </Window.DataContext>
     <StackPanel Orientation="Vertical">
         <!--Load file-->
         <StackPanel Orientation="Horizontal">
-            <TextBlock x:Name="OpenFilePath" Text="audiosync.mp4" />
+            <TextBlock x:Name="OpenFilePath" Text="{Binding VideoPath}" />
             <Button x:Name="OpenFile" Click="OpenFile_Click" Content="Open File..." />
         </StackPanel>
         <!--Visualizer-->
+        <svl:WaveformTimeline x:Name="waveform" />
         <!--Video Marker-->
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="00:01:30.20" />
